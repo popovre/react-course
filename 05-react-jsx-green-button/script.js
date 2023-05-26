@@ -21,3 +21,21 @@ root.render(<App />);
 
 // const appDiv = document.querySelector('.app');
 // console.log(appDiv);
+// class User {
+//   hello: 'hello'
+
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   sayHi() {
+//     console.log('method called')
+//   }
+// }
+
+// const user1 = new User;
+// console.log(user1);
+
+
+// new function() {
+//   console.log('function called')
+// } 
