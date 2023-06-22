@@ -1,8 +1,13 @@
 export default function Login() {
 	function handleFormSubmit(evt) {
 		evt.preventDefault();
-		console.log(evt.target)
-	}
+    const userData = { 
+      username: evt.target.username.value,
+      password: evt.target.password.value
+    }
+		console.log(userData);
+    alert(Object.entries(userData).join(','));
+	}; 
 
 	return (
     <>
