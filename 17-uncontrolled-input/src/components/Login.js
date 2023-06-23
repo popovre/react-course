@@ -6,7 +6,7 @@ export default function Login() {
       password: evt.target.password.value
     }
 		console.log(userData);
-    alert(Object.entries(userData).join(','));
+    alert(JSON.stringify(userData));
 	}; 
 
 	return (
