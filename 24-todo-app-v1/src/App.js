@@ -14,7 +14,11 @@ function App() {
 		<div className='app'>
 			<h1>Todo App</h1>
 			<TodoForm addTodo={addTodoHandler} />
-      <TodoList todos={todos}/>
+			<TodoList todos={todos}/>  
+			{
+				!todos.length && <h2>Todo list is empty</h2>
+			}
+			
 		</div>
 	)
 }
