@@ -5,7 +5,7 @@ import styles from './TodoList.module.css';
 export default function TodoList({ todos, deleteTodo }) {
   return (
     <div className={styles.TodoListContainer}>
-      {todos.map((todo, index) => <Todo key={index} deleteTodo={deleteTodo} index={index} todo={todo} />)}
+      {todos.map((todo) => <Todo key={todo.id} deleteTodo={deleteTodo} todo={todo} />)}
     </div>
   );
 }
