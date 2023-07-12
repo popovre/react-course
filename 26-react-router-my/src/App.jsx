@@ -4,7 +4,9 @@ import Contacts from './components/Contacts';
 import About from './components/About';
 import NotFound from './components/NotFound';
 import MainLayout from './layouts/MainLayout';
-import Courses from './components/Courses';
+import CoursesLayout from './layouts/CoursesLayout';
+import courses from './data/courses';
+import SingleCourse from './components/SingleCourse';
 import './App.css';
 
 function App() {
@@ -17,7 +19,11 @@ function App() {
               <Route index element={<Home/>}/>
               <Route path="about" element={<About />} />
               <Route path="contacts" element={<Contacts />} />
-              <Route path="courses" element={<Courses />} />
+                <Route path="courses" element={<CoursesLayout courses={courses} />}>
+                  {courses.map((course, index) => {
+                    return <Route key={index} path={course.slug} element={<SingleCourse {...course}/>}  />
+                  })}
+                </Route>
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

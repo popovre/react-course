@@ -1,0 +1,12 @@
+.CoursesLinks {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.CoursesLinks a {
+	color:darkgoldenrod
+}
+
