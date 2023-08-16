@@ -1,9 +1,12 @@
-import { Routes, Route, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import style from './Course.module.css';
 
-const SingleCourse = ({id, slug, title}) => {
+const SingleCourse = ({courses}) => {
+	const {react} = useParams();
+	const course = courses.find((element) => element.slug === react);
 	return (
-		<div className={`course-${slug}`}>
-			<span>{title}</span>
+		<div className={`${style.Course} course-${course.slug}`}>
+			<span>{course.title}</span>
 		</div>
 	)
 }

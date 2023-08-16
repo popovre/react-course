@@ -16,7 +16,7 @@ const courses = [
 	},
 	{
 		title: 'Complete Node.js Guide',
-		slug: 'node-js',
+		slug: 'nodejs',
 		id: 361
 	},
 ]
