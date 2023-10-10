@@ -1,10 +1,12 @@
 import courses from '../data/courses';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import {useEffect} from 'react';
 
 const SingleCourse = () => {
 	const params = useParams();
 	const navigate = useNavigate();
+	const location = useLocation();
+	console.log(location);
 	const course = courses.find(course => course.slug === params.slug);
 	
 	useEffect(() => {
