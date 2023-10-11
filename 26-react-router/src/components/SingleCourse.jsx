@@ -6,7 +6,6 @@ const SingleCourse = () => {
 	const params = useParams();
 	const navigate = useNavigate();
 	const location = useLocation();
-	console.log(location);
 	const course = courses.find(course => course.slug === params.slug);
 	
 	useEffect(() => {
